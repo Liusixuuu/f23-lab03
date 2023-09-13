@@ -73,11 +73,12 @@ public class ArrayIntQueue implements IntQueue {
 
     /** {@inheritDoc} */
     public boolean isEmpty() {
-        return size >= 0;
+        return size <= 0;
     }
 
     /** {@inheritDoc} */
     public Integer peek() {
+        if (head >= size) return null;
         return elementData[head];
     }
 
@@ -102,7 +103,7 @@ public class ArrayIntQueue implements IntQueue {
                 newData[head - i] = elementData[i];
             }
             elementData = newData;
-            head = 0;
+            head++;
         }
     }
 }

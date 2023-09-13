@@ -14,4 +14,3 @@ The following commands might be useful:
 * `npm install` install all dependencies, including TypeScript and Jest.
 * `npm test` runs jest and prints a coverage report. It also creates a html report in `coverage/lcov-report/index.html`
 * `npx jest --watch --collect-coverage` runs Jest from the command line with extra arguments, here to continue watching for changes (will rerun tests immediately when changes in files are detected) and reporting coverage
-

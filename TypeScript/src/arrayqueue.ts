@@ -81,6 +81,7 @@ function newArrayIntQueue (): IntQueue {
       }
       const value = elementData[head]
       head = (head + 1) % elementData.length
+      // head--
       size--
       return value
     },
@@ -94,10 +95,13 @@ function newArrayIntQueue (): IntQueue {
     },
 
     isEmpty: function (): boolean {
-      return size >= 0
+      return size == 0
     },
 
     peek: function (): number | null {
+      if (size <= head) {
+        return null
+      }
       return elementData[head]
     },
 

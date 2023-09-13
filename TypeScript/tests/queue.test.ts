@@ -51,5 +51,19 @@ describe("test size: ", ()=> {
         for (let i =0;i<11;i++)
             queue.enqueue(i)
         expect(queue.size()).toBe(11)
+        queue.clear();
+        expect(queue.size()).toBe(0)
+        expect(queue.isEmpty()).toBeTruthy()
+    })
+
+    test("0 entries", ()=>{
+        const queue = createQueue()
+        expect(queue.size()).toBe(0)
+        queue.enqueue(1);
+        queue.enqueue(2);
+        expect(queue.peek()).toBe(2)
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
     })
 })
